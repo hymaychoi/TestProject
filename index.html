@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Serif:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Survey Form Page</title>
+</head>
+<body>
+<div id="body-div">
+<div class="header">
+<h1 id="title">Satisfaction Survey Form</h1>
+<p id="description"><i>Thank you for taking the time to help us improve the platform</i></p></div>
+</div>
+  
+<section class="form">
+  <form id="survey-form">
+    <ul>
+    <li><label id="name-label" class="labels"> Name </label><br>
+    <input type="text" id="name" placeholder="Enter your name" required></li><br>
+    <li><label id="email-label" class="labels"> Email </label><br>
+    <input type="email" id="email" placeholder="Enter your email address" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" size="30" required></li><br>
+     <li><label id="number-label" class="labels"> Age(optional) </label><br>
+    <input type="number" pattern="\d*" min="10" max="99" step="1" id="number" placeholder="Enter your age" required></li><br>
+     <li><label id="roll-label" class="labels"> Which option best describes your current role? </label><br>
+       
+  <select class="dropdown" name="current_roll" id="current_roll">
+  <option value="" disabled selected>Select your option</option>
+  <option value="student">Student</option>
+  <option value="full_time_job">Full Time Job</option>
+  <option value="full_time_learner">Full Time Learner</option>
+  <option value="no_answer">Prefer not to answer</option>
+  <option value="other">other</option>
+      </select></li>
+ <br>
+ <li class="labels">Would you recommend freeCodeCamp to a friend?
+   <br> 
+<input checked type="radio" id="definitely" name="recommend" value="definitely">
+<label for="definitely-label">Definitely</label><br>
+ <input type="radio" id="maybe" name="recommend" value="maybe">
+<label for="maybe-label">Maybe</label><br>
+<input type="radio" id="not_sure" name="recommend" value="not_sure">
+   <label for="not_sure-label">Not Sure</label></li><br>
+
+     <li><label id="feature-label" class="labels">What is your favorite feature of freeCodeCamp? </label><br>
+
+  <select class="dropdown" name="feature" id="feature">
+  <option value="" disabled selected>Select your option</option>
+  <option value="challenges">Challenges</option>
+  <option value="projects">Projects</option>
+  <option value="community">Community</option>
+  <option value="open_source">Open Source</option>
+      </select>
+      </li><br>
+ <li class="labels">What would you like to see improved? (Check all that apply)<br>
+<input type="checkbox" id="front_end" name="front_end" value="front_end">
+<label for="front_end"> Front-end Projects</label><br>
+<input type="checkbox" id="back_end" name="back_end" value="back_end">
+<label for="back_end"> Back-end Projects</label><br>
+<input type="checkbox" id="data_visual" name="data_visual" value="data_visual">
+<label for="data_visual"> Data Visualization</label><br>
+<input type="checkbox" id="forum" name="forum" value="forum">
+<label for="forum"> Forum</label></li><br>
+     
+     <li><label id="textarea-label" class="labels">Any comments or suggestions?</label></li>
+      <textarea id="texarea" placeholder="Enter your comment here.."></textarea><br>
+    <input id="submit" type="submit" name="submit" value="Submit">
+      </ul>
+  </form>
+</section>
+</body>
+</html>
